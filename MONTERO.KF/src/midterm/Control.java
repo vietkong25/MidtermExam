@@ -3,7 +3,7 @@ package midterm;
 
 public class Control
 {
-	private String name, pass, cfrmPass, city, gender, gmail;
+	private String name, pass, cfrmPass, city, gender, email;
 	
 	public String getName()
 	{
@@ -45,12 +45,12 @@ public class Control
 	{
 		this.gender = gender;
 	}
-	public String getGmail()
+	public String getEmail()
 	{
-		return gmail;
+		return email;
 	}
-	public void setGmail(String gmail)
+	public void setEmail(String email)
 	{
-		this.gmail = gmail;
+		this.email = email;
 	}
 }

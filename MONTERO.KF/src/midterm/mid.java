@@ -12,9 +12,9 @@ import java.io.PrintStream;
 public class mid extends JFrame
 {
 	private JButton submitB;
-	private JLabel nameLbl, passLbl, cfrmPassLbl, cityLbl, genderLbl, gmailLbl;
-	private JTextField nameTF, passTF, cfrmPassTF, cityTF, genderTF, gmailTF;
-	private String name, pass, cfrmPass, city, gender, gmail;
+	private JLabel namelbl, passlbl, cfrmPasslbl, citylbl, genderlbl, emailLbl;
+	private JTextField nameTF, passTF, cfrmPassTF, cityTF, genderTF, emailTF;
+	private String name, pass, cfrmPass, city, gender, email;
 	
 	public mid()
 	{
@@ -23,44 +23,44 @@ public class mid extends JFrame
 		try
 		{
 		Control gs = new Control();
-		File output = new File("C:/Users/Keith/WorkSpace/MONTERO.KF/src/K/File.txt");
+		File output = new File("C:/Users/Keith/WorkSpace/MONTERO.KF/src/midterm/File.txt");
 		PrintStream print = new PrintStream(output);
 		
-		nameLbl = new JLabel("Name:");
-		nameLbl.setFont(new Font("SansSerif", Font.PLAIN, 12));
-		nameLbl.setBounds(30,22,100,20);
+		namelbl = new JLabel("Name:");
+		namelbl.setFont(new Font("SansSerif", Font.PLAIN, 12));
+		namelbl.setBounds(30,22,100,20);
 		nameTF = new JTextField(25);
 		nameTF.setBounds(140, 20, 200, 25);
 		
-		passLbl = new JLabel("Password:");
-		passLbl.setFont(new Font("SansSerif", Font.PLAIN, 12));
-		passLbl.setBounds(30,70,150,20);
-		passTF = new JTextField(25);
+		passlbl = new JLabel("Password:");
+		passlbl.setFont(new Font("SansSerif", Font.PLAIN, 12));
+		passlbl.setBounds(30,70,150,20);
+		passTF= new JTextField(25);
 		passTF.setBounds(140, 68, 200, 25);
 
-		cfrmPassLbl = new JLabel("Confirm Password:");
-		cfrmPassLbl.setFont(new Font("SansSerif", Font.PLAIN, 12));
-		cfrmPassLbl.setBounds(30,120,200,20);
+		cfrmPasslbl = new JLabel("Confirm Password:");
+		cfrmPasslbl.setFont(new Font("SansSerif", Font.PLAIN, 12));
+		cfrmPasslbl.setBounds(30,120,200,20);
 		cfrmPassTF = new JTextField(30);
 		cfrmPassTF.setBounds(140, 118, 200, 25);
 
-		cityLbl = new JLabel("City:");
-		cityLbl.setFont(new Font("SansSerif", Font.PLAIN, 12));
-		cityLbl.setBounds(30,170,100,20);
+		citylbl = new JLabel("City:");
+		citylbl.setFont(new Font("SansSerif", Font.PLAIN, 12));
+		citylbl.setBounds(30,170,100,20);
 		cityTF = new JTextField(25);
 		cityTF.setBounds(140, 168, 200, 25);
 		
-		genderLbl = new JLabel("Gender:");
-		genderLbl.setFont(new Font("SansSerif", Font.PLAIN, 12));
-		genderLbl.setBounds(30,220,100,20);
+		genderlbl = new JLabel("Gender:");
+		genderlbl.setFont(new Font("SansSerif", Font.PLAIN, 12));
+		genderlbl.setBounds(30,220,100,20);
 		genderTF = new JTextField(30);
 		genderTF.setBounds(140, 218, 200, 25);
 		
-		gmailLbl = new JLabel("Gmail:");
-		gmailLbl.setFont(new Font("SansSerif", Font.PLAIN, 12));
-		gmailLbl.setBounds(30,270,100,20);
-		gmailTF = new JTextField(25);
-		gmailTF.setBounds(140, 268, 200, 25);
+		emailLbl = new JLabel("Gmail:");
+		emailLbl.setFont(new Font("SansSerif", Font.PLAIN, 12));
+		emailLbl.setBounds(30,270,100,20);
+		emailTF = new JTextField(25);
+		emailTF.setBounds(140, 268, 200, 25);
 		
 		submitB = new JButton("SUBMIT");
 		submitB.setBounds(284, 348, 200, 50);
@@ -78,14 +78,14 @@ public class mid extends JFrame
 				gs.setConPass(cfrmPassTF.getText());
 				gs.setCity(cityTF.getText());
 				gs.setGender(genderTF.getText());
-				gs.setGmail(gmailTF.getText());
+				gs.setEmail(emailTF.getText());
 				
 				name = gs.getName();
 				pass = gs.getPassword();
 				cfrmPass = gs.getConPass();
 				city = gs.getCity();
 				gender = gs.getGender();
-				gmail = gs.getGmail();
+				email = gs.getGmail();
 				
 				print.println(name + ";"
 							+ pass + ";"
